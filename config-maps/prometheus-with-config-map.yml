@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+spec:
+  ...
+  template:
+    ...
+    spec:
+      containers:
+        ...
+        volumeMounts:
+          - mountPath: /etc/prometheus
+            name: prom-conf
+      volumes:
+        - name: prom-conf
+          configMap:
+            name: prom-conf
+...

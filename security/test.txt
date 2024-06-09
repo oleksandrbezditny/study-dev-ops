@@ -1,0 +1,14 @@
+- cluster:
+    certificate-authority: /Users/oleksandr/WebstormProjects/study-dev-ops/security/keys/server-ca.crt
+    server: https://0.0.0.0:59111
+  name: jdoe
+
+- context:
+    cluster: jdoe
+    user: jdoe
+  name: jdoe
+
+  - name: jdoe
+    user:
+      client-certificate: /Users/oleksandr/WebstormProjects/study-dev-ops/security/keys/jdoe.crt
+      client-key: /Users/oleksandr/WebstormProjects/study-dev-ops/security/keys/jdoe.key
